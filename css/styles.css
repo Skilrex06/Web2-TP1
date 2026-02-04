@@ -1,0 +1,54 @@
+@charset "UTF-8";
+/* Liens d'images
+Chichen Itza : "https://qualityaging.com.au/Downloads/Activities/Armchair-Travel/Armchair-Travel-Countries-K-O/thumbnail.axd?config=alg3d1VTaWxoUms3U1k3Q21JcU5JOEFMT2JqMC9ZQUxvKytlRGNjaHRHQlZVa043Z3JvbmpKdkFHV2hIUkJDbjE2aG1HL2R1YVR3QndvMVNGeXhjbjNmOUxUNDVUdnFFdzRIYTgzN3VhVk5wNG0wVjBzY3dWelNjOWxxQXkyTTF4NE1ZYXZZcTFxOFBON1JPQkZqdWNVSjkzcVZWejdZcStsQnNuaGV3RzgxT1ozRENmUFN5ZXMxdEtOLzZuUysxM3JkaXJBOVJMMGc9"
+Tour Eiffel : "https://wallpaperaccess.com/full/3883681.jpg"
+Ville Hawaïenne : "https://tse2.mm.bing.net/th/id/OIP.ViSkTUsJuATa-omyxvwQ2QAAAA?rs=1&pid=ImgDetMain&o=7&rm=3"
+*/
+* {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 1.1rem;
+}
+
+.container {
+  max-width: 1200px;
+  width: 90%;
+  margin: 0 auto;
+}
+
+body {
+  margin: 0;
+}
+
+header {
+  color: white;
+  background-color: rgb(145, 0, 0);
+  padding: 10px 0;
+}
+
+main {
+  background-color: gray;
+}
+
+footer {
+  padding: 10px 0;
+  color: white;
+  background-color: black;
+}
+
+header > div,
+footer > div {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+nav a {
+  display: inline-block;
+  margin: auto 8px;
+  color: white;
+  text-decoration: none;
+  background-color: rgb(255, 46, 46);
+  border: 2px solid red;
+  border-radius: 10px;
+  padding: 4px 10px;
+}/*# sourceMappingURL=styles.css.map */
