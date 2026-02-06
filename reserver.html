@@ -19,12 +19,54 @@
     </header>
     <main class="container">
         <h1>Réserver</h1>
-        
+        <form method="post">
+            <fieldset>
+                <fieldset class="informations-personnelles">
+                    <legend>Informations personnelles</legend>
+                    <div>
+                        <label for="nom">Nom :</label>
+                        <input type="text" id="nom" name="nom" required>
+                    </div>
+                    <div>
+                        <label for="prenom">Prénom :</label>
+                        <input type="text" id="prenom" name="prenom" required>
+                    </div>
+                    <div>
+                        <label for="email">Email :</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                </fieldset>
+                <fieldset class="details-reservation">
+                    <legend>Détails de la réservation</legend>
+                    <div>
+                        <label for="destination">Choisissez votre destination :</label>
+                        <select id="destination" name="destination" required>
+                            <option value="">-- Sélectionnez une destination --</option>
+                            <option value="hawai">Hawai</option>
+                            <option value="paris">Paris</option>
+                            <option value="chichenitza">Chichen Itza</option>
+                        </select>
+                    </div>
+                    <div>
+                        <label for="date-depart">Date de départ :</label>
+                        <input type="date" id="date-depart" name="date-depart" required>
+                    </div>
+                    <div>
+                        <label for="nombre-personnes">Nombre de personnes :</label>
+                        <input type="number" id="nombre-personnes" name="nombre-personnes" min="1" max="10" required>
+                    </div>
+                </fieldset>
+            </fieldset>
+            <div>
+                <button type="submit">Réserver</button>
+                <button type="reset">Réinitialiser</button>
+            </div>
+        </form>
     </main>
     <footer>
         <div class="container">
-            <h4>Ceci est mon footer</h4>
-            <h4>Je suis un téléphone</h4>
+            <p>Effets CSS ajoutés aux pages</p>
+            <p>Réserver : transition (balises input)</p>
         </div>
     </footer>
 </body>

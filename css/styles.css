@@ -104,4 +104,42 @@ figure {
   margin: 10px 0;
 }
 
+form {
+  margin: 20px 0;
+}
+form button {
+  margin: 10px 0;
+  background-color: rgb(255, 80, 80);
+  color: white;
+}
+form button:hover {
+  background-color: #e90000;
+}
+form fieldset {
+  display: flex;
+  background-color: rgb(228.25, 228.25, 228.25);
+  padding: 20px;
+}
+form fieldset legend {
+  font-size: 1.3rem;
+  padding: 0 5px;
+}
+form fieldset fieldset {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+}
+form fieldset div {
+  display: flex;
+  flex-direction: column;
+  margin: 5px 0;
+}
+form fieldset div input {
+  width: 75%;
+  transition: border-color 0.5s ease;
+}
+form fieldset div input:focus {
+  border: 3px solid rgb(255, 80, 80);
+}
+
 /* Media queries *//*# sourceMappingURL=styles.css.map */

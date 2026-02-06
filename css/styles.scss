@@ -8,7 +8,9 @@ Ville Hawaïenne : "https://tse2.mm.bing.net/th/id/OIP.ViSkTUsJuATa-omyxvwQ2QAAA
 
 $petit-espace: 10px 0;
 $moyen-espace: 20px 0;
+$marge-fieldsets: 20px;
 $bande-grise: rgb(88, 88, 88);
+$boutons-rouges: rgb(255, 80, 80);
 
 /* Styles universels -- Positionnement */
 * {
@@ -41,7 +43,7 @@ header {
         margin: auto 8px;
         color: white;
         text-decoration: none;
-        background-color: rgb(255, 80, 80);
+        background-color: $boutons-rouges;
         border: 3px solid red;
         border-radius: 10px;
         padding: 4px 10px;
@@ -121,4 +123,47 @@ figure {
     margin: $petit-espace;
 }
 
+form {
+    button {
+        margin: $petit-espace;
+        background-color: $boutons-rouges;
+        color: white;
+
+        &:hover {
+            background-color: darken($color: $boutons-rouges, $amount: 20);
+        }
+    }
+    margin: $moyen-espace;
+
+    fieldset {
+        display: flex;
+        background-color: lighten($bande-grise, 55);
+        padding: $marge-fieldsets;
+
+        legend {
+            font-size: 1.3rem;
+            padding: 0 5px;
+        }
+
+        fieldset {
+            width: 50%;
+            display: flex;
+            flex-direction: column;
+        }
+
+        div {
+            display: flex;
+            flex-direction: column;
+            margin: 5px 0;
+
+            input {
+                width: 75%;
+                transition: border-color 0.5s ease;
+                &:focus {
+                    border: 3px solid $boutons-rouges;
+                }
+            }
+        }
+    }
+}
 /* Media queries */
