@@ -3,6 +3,14 @@ Chichen Itza : "https://qualityaging.com.au/Downloads/Activities/Armchair-Travel
 Tour Eiffel : "https://wallpaperaccess.com/full/3883681.jpg"
 Ville Hawaïenne : "https://tse2.mm.bing.net/th/id/OIP.ViSkTUsJuATa-omyxvwQ2QAAAA?rs=1&pid=ImgDetMain&o=7&rm=3"
 */
+
+/* Variables SCSS */
+
+$petit-espace: 10px 0;
+$moyen-espace: 20px 0;
+$bande-grise: rgb(88, 88, 88);
+
+/* Styles universels -- Positionnement */
 * {
     font-family: Arial, Helvetica, sans-serif;
     font-size: 1.1rem;
@@ -19,20 +27,45 @@ body {
 }
 
 header {
-    color: white;
     background-color: rgb(145, 0, 0);
-    padding: 10px 0;
-}
+    padding: $petit-espace;
 
-main {
-    background-color: gray;
+    h2 a {
+        font-size: 1.6rem;
+        text-decoration: none;
+        color: white;
+    }
+
+    nav a {
+        display: inline-block;
+        margin: auto 8px;
+        color: white;
+        text-decoration: none;
+        background-color: rgb(255, 80, 80);
+        border: 3px solid red;
+        border-radius: 10px;
+        padding: 4px 10px;
+        transition: background-color 0.3s ease;
+        transition: border-color 0.3s ease;
+
+        &:hover {
+            background-color: darken($color: red, $amount: 15);
+            border: solid darken($color: red, $amount: 15);
+        }
+
+        &:active {
+            background-color: darken($color: red, $amount: 30);
+            border: solid darken($color: red, $amount: 30);
+        }
+    }
 }
 
 footer {
-    padding: 10px 0;
+    padding: $petit-espace;
     color: white;
     background-color: black
 }
+
 
 header>div,
 footer>div {
@@ -41,13 +74,51 @@ footer>div {
     align-items: center;
 }
 
-nav a {
-    display: inline-block;
-    margin: auto 8px;
+/* Styles universels -- Typographie */
+
+h1 {
+    font-size: 2rem;
     color: white;
-    text-decoration: none;
-    background-color: rgb(255, 46, 46);
-    border: 2px solid red;
-    border-radius: 10px;
-    padding: 4px 10px;
+    background-color: $bande-grise;
+    padding: 10px;
 }
+
+main a {
+    text-decoration: none;
+    color: rgb(255, 0, 255);
+
+    &:hover {
+        text-decoration: underline;
+    }
+}
+
+body>a {
+    display: none;
+}
+
+/* Styles spécifiques aux pages */
+
+.accueil section {
+    h2 {
+        font-size: 1.6rem;
+    }
+
+    div {
+        margin: $moyen-espace;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        text-align: center;
+        gap: 20px;
+
+        img {
+            max-width: 350px;
+            width: 100%;
+        }
+    }
+}
+
+figure {
+    margin: $petit-espace;
+}
+
+/* Media queries */
