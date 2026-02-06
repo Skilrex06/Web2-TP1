@@ -108,12 +108,13 @@ form {
   margin: 20px 0;
 }
 form button {
+  transition: all 1s ease;
   margin: 10px 0;
   background-color: rgb(255, 80, 80);
   color: white;
 }
 form button:hover {
-  background-color: #e90000;
+  transform: scale(1.05);
 }
 form fieldset {
   display: flex;
@@ -134,11 +135,11 @@ form fieldset div {
   flex-direction: column;
   margin: 5px 0;
 }
-form fieldset div input {
+form fieldset div input, form fieldset div select {
   width: 75%;
   transition: border-color 0.5s ease;
 }
-form fieldset div input:focus {
+form fieldset div input:focus, form fieldset div select:focus {
   border: 3px solid rgb(255, 80, 80);
 }
 
